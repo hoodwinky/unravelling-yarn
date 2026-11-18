@@ -1,0 +1,54 @@
+[
+  {
+    "id": "yarn-001",
+    "title": "Unravelling Yarn",
+    "summary": "A shared home for sparks, connections and projects. Pick up a thread and pass it on.",
+    "stage": "building",
+    "next_step": "Connect a deliberately shared chat excerpt to a private review inbox.",
+    "connections": [
+      "yarn-002",
+      "yarn-003",
+      "yarn-004"
+    ],
+    "source": "Founder brief, 18 November 2026; summary approved for public repository.",
+    "publication_approved": true
+  },
+  {
+    "id": "yarn-002",
+    "title": "Sydney in Technicolor",
+    "summary": "Bring more colour to Sydney streets through emerald greenery, orange, gold, sandstone and community stories.",
+    "stage": "concept",
+    "next_step": "Choose one manageable design or storytelling task and prepare a brief.",
+    "connections": [
+      "yarn-003",
+      "yarn-004"
+    ],
+    "source": "FreeX public campaign concept.",
+    "publication_approved": true
+  },
+  {
+    "id": "yarn-003",
+    "title": "Everyone Deserves a Garden",
+    "summary": "Explore community garden stewardship alongside existing local and strata systems.",
+    "stage": "concept",
+    "next_step": "Define one pilot location and invite a conversation with the relevant stewards.",
+    "connections": [
+      "yarn-002"
+    ],
+    "source": "Founder public stewardship concept.",
+    "publication_approved": true
+  },
+  {
+    "id": "yarn-004",
+    "title": "King of Hearts / Ace of Spades",
+    "summary": "Original playing-card motifs: orange sparks, purple skies, emerald growth and playful feline mischief.",
+    "stage": "concept",
+    "next_step": "Create one original visual brief using generic suits and original artwork.",
+    "connections": [
+      "yarn-001",
+      "yarn-002"
+    ],
+    "source": "Founder creative brief, 18 November 2026.",
+    "publication_approved": true
+  }
+]
