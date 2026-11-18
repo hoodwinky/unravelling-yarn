@@ -7,7 +7,7 @@ An open ideas engine and project hub: a place to connect creative sparks, develo
 
 ## Start here
 - [Project index](projects.json)
-- [Browse the hub source](index.html) — download this repository and open index.html in a browser. Hosted website deployment has not been configured.
+- [Hub source](index.html) — GitHub Pages publishes the checked website from main through .github/workflows/static.yml.
 - [Suggest an idea](../../issues/new?template=idea.yml)
 - [Capture and integration plan](docs/capture.md)
 
