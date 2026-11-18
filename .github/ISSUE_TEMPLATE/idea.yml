@@ -1,0 +1,37 @@
+name: Pick up a thread
+description: Share a public idea or develop an existing thread.
+title: "[Idea] "
+body:
+  - type: markdown
+    attributes:
+      value: "This form creates a PUBLIC issue. Share only information intended for public release."
+  - type: input
+    id: thread
+    attributes:
+      label: Existing thread ID or new title
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What is the idea?
+      description: Describe the opportunity and who it could help.
+    validations:
+      required: true
+  - type: textarea
+    id: next
+    attributes:
+      label: One practical next step
+    validations:
+      required: true
+  - type: input
+    id: connections
+    attributes:
+      label: Related threads or public source links
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Public sharing
+      options:
+        - label: I have permission to share this content publicly under the repository's MIT licence.
+          required: true
