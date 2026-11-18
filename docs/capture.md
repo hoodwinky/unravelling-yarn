@@ -1,28 +1,22 @@
-# Capture integration — planned, not connected
+# Capture status
 
-## Available now
-- Public GitHub issue intake with structured prompts.
-- Connected project records in projects.json.
-- A browser hub with search, stage filtering and local draft export.
+## Working now
+- Paste a selected conversation or choose TXT, SRT or a ChatGPT JSON export (up to 5 MB).
+- Keyword rules suggest candidate ideas. This is a deterministic first pass, not an AI interpretation.
+- Supported role-labelled text/SRT and ChatGPT JSON processing includes user messages and excludes assistant messages.
+- Exact normalized duplicate suggestions are skipped. Related public threads are suggested by matching title words; semantic duplicates can remain.
+- Drafts persist in browser localStorage on that device; raw input is cleared after extraction. This is not a synced or account-protected private inbox.
+- Edit title, public summary and next step before public submission.
+- An approval checkbox is required before preparing a public GitHub issue. The issue still needs to be submitted on GitHub.
+- Only the edited public fields go into the issue URL. The transcript is not attached.
+- Download the inbox as JSON to retain or move drafts. Clear the device inbox to remove stored drafts.
 
-## Required next
-1. Select an input that the founder explicitly shares: a chat excerpt, a transcript file or an authorized integration event.
-2. Receive it in a separate private service. Never send a raw transcript to a public issue, pull request, Actions log or repository file.
-3. Extract candidate ideas with title, summary, source reference, connections and a next step.
-4. Match existing thread IDs before proposing new records.
-5. Present proposed public summaries privately for approval.
-6. Publish only approved summaries to projects.json.
-7. Retain ingestion IDs privately to avoid processing the same excerpt twice.
+## Automatic checks
+The GitHub Actions check job rejects missing required fields, duplicate IDs/titles, unknown stages, invalid connections and public records without explicit approval. Capture regression tests and syntax validation run before a checked asset bundle is uploaded. Deployment depends on this check job.
 
-No source credentials or ingestion endpoint are configured. No scheduled job is running. Creating this repository does not give it access to ChatGPT history.
+These checks cannot judge whether a summary is accurate or safe to publish. They do not provide semantic deduplication or access to other chats.
 
-## Proposed private draft record
-- ingestion_id
-- source_reference
-- thread_id or candidate_new_thread
-- proposed_public_summary
-- next_step
-- related_thread_ids
-- review_status: pending / approved / rejected
+## Still not connected
+There is no background connection to all ChatGPT history. No chat-ingestion API credential, private server inbox or scheduled capture task is configured. An authorized input integration is required to make future conversation capture unattended.
 
-Approval must happen privately before the public write. A public pull request is already publication.
+Raw transcripts, personal matters and Evidence Engine case records must stay outside this public repository. Public issues, pull requests and commits are already public.
